@@ -7,7 +7,6 @@ with open('setting.json','r',encoding='utf8') as jfile:
     jdata=json.load(jfile)
 
 bot=commands.Bot(command_prefix='[')
-ch = bot.get_channel(id)
 
 @bot.event
 async def on_ready():
@@ -29,8 +28,7 @@ async def on_member_remove(member):
 async def on_message(msg):
     if msg.content == '堀北鈴音':
      await msg.channel.send('hi')
-
-
+     
 @bot.command()
 async def 幹你娘(ctx):
     await ctx.send('幹你娘')
@@ -59,4 +57,4 @@ async def 堀北鈴音4(ctx):
     pic= discord.File(jdata['pic4'])
     await ctx.send(file=pic)
 
-bot.run('NzIxNTUyOTYzODk3OTE3NDQ0.XuWMpA.eW9DiTFTyAgF4cqYnSnm--muOD4')
+bot.run('NzIxNTUyOTYzODk3OTE3NDQ0.XuXnrw.XI21xIVf9noIvCFxuskw9ubbvGQ')
